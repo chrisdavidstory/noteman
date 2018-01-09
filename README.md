@@ -3,7 +3,7 @@ A simple note management application (code assignment)
 
 Also my first go at building an SPA.
 
-#install lumen based back end
+# install lumen based back end
 
 1) clone repo
 2) cd noteman-api
@@ -16,7 +16,7 @@ Also my first go at building an SPA.
 9) php -S localhost:9000 -t public
 
 
-#install Vue.js SPA
+# install Vue.js SPA
 1) cd noteman-spa
 2) yarn install
 3) yarn run dev
