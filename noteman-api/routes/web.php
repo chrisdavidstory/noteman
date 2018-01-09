@@ -11,6 +11,9 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/notes',          [ 'middleware' => ['auth', 'cors'], 'uses' => 'NotesController@index' ]);
+$router->post('/notes',         [ 'middleware' => ['auth', 'cors'], 'uses' => 'NotesController@store' ]);
+$router->delete('/notes/{id}',  [ 'middleware' => ['auth', 'cors'], 'uses' => 'NotesController@destroy' ]);
+$router->patch('/notes/{id}',    [ 'middleware' => ['auth', 'cors'], 'uses' => 'NotesController@update']);
+
+$router->post('/login', [ 'middleware' => 'cors', 'uses' => 'AuthController@store' ]);

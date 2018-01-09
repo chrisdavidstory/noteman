@@ -7,7 +7,10 @@
     "require": {
         "php": ">=7.0",
         "laravel/lumen-framework": "5.5.*",
-        "vlucas/phpdotenv": "~2.2"
+        "vlucas/phpdotenv": "~2.2",
+        "flipbox/lumen-generator": "^5.5",
+        "webpatser/laravel-uuid": "^3.0",
+        "palanik/lumen-cors": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
