@@ -22,6 +22,6 @@ Also my first go at building an SPA.
 3) yarn run dev
 4) open browser to the link given as the result of the last command
 
-#test user details
+# test user details
 email: test@test.com
 password: $sh4rpspr1nG$
