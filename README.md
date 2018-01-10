@@ -11,9 +11,14 @@ Also my first go at building an SPA.
 4) cp .env.example .env
 5) php artisan key:generate
 6) touch ./database/database.sqlite
-7) php artisan migrate
-8) php artisan db:seed
-9) php -S localhost:9000 -t public
+7) set database variables in .env to reflect using sqlite and database location
+```
+DB_CONNECTION=sqlite
+DB_DATABASE='/home/chris/Code/noteman/noteman-api/database/database.sqlite'
+```
+8) php artisan migrate
+9) php artisan db:seed
+10) php -S localhost:9000 -t public
 
 
 # install Vue.js SPA
