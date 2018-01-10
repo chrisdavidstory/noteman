@@ -59,6 +59,11 @@ import axios from 'axios'
 
 export default {
   name: 'login',
+  beforeCreate () {
+    if (store.state.userIsLoggedIn) {
+      router.push({ name: 'dashboard' })
+    }
+  },
   data () {
     return {
       loader: false,

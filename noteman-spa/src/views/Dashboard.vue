@@ -8,6 +8,7 @@
 import NoteList from '@/components/NoteList'
 
 export default {
+  name: 'dashboard',
   data () {
     return {
       notes: []

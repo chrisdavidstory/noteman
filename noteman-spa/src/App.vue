@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div v-if="isLoginPage">
+    <div v-if="userLoggedOut">
       <transition name='fade'>
         <router-view />
       </transition>
@@ -21,15 +21,16 @@
 <script>
 
 import Navigation from '@/components/Navigation'
-// import store from '@/store'
+import store from '@/store'
+
 export default {
   name: 'app',
   components: {
     Navigation
   },
   computed: {
-    isLoginPage () {
-      return this.$route.name === 'login'
+    userLoggedOut () {
+      return !store.state.userIsLoggedIn
     }
   }
 }

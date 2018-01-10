@@ -15,17 +15,23 @@
 import Note from '@/components/Note'
 import store from '@/store'
 import axios from 'axios'
+import router from '@/router'
 export default {
   name: 'note-list',
   created () {
     let key = localStorage.getItem('apiKey')
-    axios.get('http://localhost:9000/notes?api_key=' + key)
-      .then((response) => {
-        response.data.data.forEach(element => {
-          store.commit('ADD_NOTE_TO_LIST', element)
+    if (key) {
+      axios.get('http://localhost:9000/notes?api_key=' + key)
+        .then((response) => {
+          response.data.data.forEach(element => {
+            store.commit('ADD_NOTE_TO_LIST', element)
+          })
         })
-      })
-      .catch()
+        .catch()
+    } else {
+      store.commit('LOGOUT_USER')
+      router.push({ name: 'login' })
+    }
   },
   data () {
     return {

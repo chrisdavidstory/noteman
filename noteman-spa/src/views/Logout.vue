@@ -8,7 +8,7 @@ import store from '@/store'
 export default {
   name: 'logout',
   mounted () {
-    localStorage.removeItem('nm-user-token')
+    localStorage.removeItem('apiKey')
     store.commit('LOGOUT_USER')
     router.push({ name: 'login' })
   }
