@@ -11,7 +11,11 @@ Also my first go at building an SPA.
 4) cp .env.example .env
 5) php artisan key:generate
 6) touch ./database/database.sqlite
+<<<<<<< HEAD
 7) set database variables in .env to reflect using sqlite and database location (please note DB_DATABASE MUST be full location path to sqlite file)
+=======
+7) set database variables in .env to reflect using sqlite and database location
+>>>>>>> bde965b39805f56be708d24b358d99cc3bc46d3a
 ```
 DB_CONNECTION=sqlite
 DB_DATABASE='/home/chris/Code/noteman/noteman-api/database/database.sqlite'
