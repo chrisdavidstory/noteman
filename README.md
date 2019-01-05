@@ -1,3 +1,6 @@
+# Deprecated
+This application was written for a job interview. It now has security vulnerabilities and I have no interest in keeping this updated. I'm archiving this repo so it can stay available for any future visitors. If you fork it, please update your fork to fix the known security flaws (at minimum update webpack).
+
 # noteman
 A simple note management application (code assignment)
 
